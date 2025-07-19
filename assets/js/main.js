@@ -50,8 +50,51 @@ const sr = ScrollReveal({
     delay: 200,
     reset: true
 });
+/*===== PROJECT IMAGE DISPLAY =====*/
+const project1 = [
+    "assets/img/project1_1.png",
+    "assets/img/project1_2.png",
+    "assets/img/project1_3.png"
+  ];
+let currentIndex1 = 0;
 
-sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .education__img',{delay: 400}); 
+function showImage1(index) {
+  document.getElementById('carouselImg1').src = project1[index];
+}
+
+function prevImage1() {
+  currentIndex1 = (currentIndex1 - 1 + project1.length) % project1.length;
+  showImage1(currentIndex1);
+}
+
+function nextImage1() {
+  currentIndex1 = (currentIndex1 + 1) % project1.length;
+  showImage1(currentIndex1);
+}
+
+const project2 = [
+    "assets/img/project2_1.png",
+    "assets/img/project2_2.png",
+    "assets/img/project2_3.png",
+    "assets/img/project2_4.png"
+  ];
+let currentIndex2 = 0;
+
+function showImage2(index) {
+  document.getElementById('carouselImg2').src = project2[index];
+}
+
+function prevImage2() {
+  currentIndex2 = (currentIndex2 - 1 + project2.length) % project2.length;
+  showImage2(currentIndex2);
+}
+
+function nextImage2() {
+  currentIndex2 = (currentIndex2 + 1) % project2.length;
+  showImage2(currentIndex2);
+}
+
+sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text,  .education__img, .project__description, .project__description__3',{}); 
+sr.reveal('.home__img, .about__subtitle, .about__text, .education__description, .project__img__container',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
-sr.reveal('.skills__data, .project__img, .contact__input',{interval: 200}); 
+sr.reveal('.skills__data, .contact__input',{interval: 200}); 

@@ -69,7 +69,7 @@
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
+                        <img src="assets/img/about_profile.jpg" alt="">
                     </div>
                     
                     <div>
@@ -83,9 +83,15 @@
 
             <section class="education section" id="education">
                 <h2 class="section-title">Education</h2>
-                <div>
-                    <img class="education__img" src="assets/img/about.jpg" alt="">
-                </div>
+                <div class="education__container bd-grid">
+                    <div class="education__img">
+                        <img src="assets/img/idcard.png" alt="">
+                    </div>
+                    <div class="education__description">
+                        <h1 class="education__subtitle">Institute of Technology of Cambodia</h1>
+                        <p class="education__text">2022-Present<br>Bachelor's Degree in Information and Communication Engineering. I just finished my third year. <br>expected graduation: 2027</p>
+                    </div>
+                    
             </section>
 
             <!--===== SKILLS =====-->
@@ -209,24 +215,49 @@
                 <h2 class="section-title">Projects</h2>
 
                 <div class="project__container bd-grid">
-                    <a href="" class="project__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="project__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="project__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="project__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="project__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="project__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
+                    <div class="project__description">
+                        <h1 class="project__subtitle">1. Gaming Accessories website</h1>
+                        <p class="project__text">built a responsive website for gaming accessories using HTML, CSS, and JavaScript which allows users to browse and purchase gaming accessories easily.</p>
+                        <a href="https://github.com/tolarom/Web_Design_Project" target="_blank"></i>https://github.com/tolarom/Web_Design_Project</a>
+                    </div>
+                    <div class="project__img__container">
+                        <img id="carouselImg1" class="project__img" src="assets/img/project1_1.png" alt="Carousel Image">
+                        <div class="project__img__controls">
+                          <button class="project__btn" onclick="prevImage1()" aria-label="Previous">
+
+                            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                          </button>
+                          <button class="project__btn" onclick="nextImage1()" aria-label="Next">
+
+                            <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+                          </button>
+                        </div>
+                    </div>
+                    <div class="project__description">
+                        <h1 class="project__subtitle">2. Student Management System(group project)</h1>
+                        <p class="project__text">Developed a student management system using object-oriented programming principles(Java), allowing for efficient management of student data and records.</p>
+                        <a href="https://github.com/tolarom/project_oop" target="_blank"></i>https://github.com/tolarom/project_oop</a>
+                    </div>
+                    <div class="project__img__container">
+                        
+                        <img id="carouselImg2" class="project__img" src="assets/img/project2_1.png" alt="Carousel Image">
+                        <div class="project__img__controls">
+                          <button class="project__btn" onclick="prevImage2()" aria-label="Previous">
+
+                            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                          </button>
+                          <button class="project__btn" onclick="nextImage2()" aria-label="Next">
+
+                            <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+                          </button>
+                        </div>
+                    </div>
+                    
+                    <div class="project__description__3">
+                        <h1 class="project__subtitle">3. Responsive Portfolio</h1>
+                        <p class="project__text">Developed a responsive portfolio website using HTML, CSS, and JavaScript, showcasing my projects and skills effectively. </p>
+                        <a href="https://github.com/tolarom/portfolio" target="_blank"></i>https://github.com/tolarom/portfolio</a>
+                    </div>
                 </div>
             </section>
 
@@ -235,12 +266,10 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form>
+                    <a href="tel:011759486"><i class='bx bx-phone' class="contact__icon"></i>+855 11 759 486</a>
+                    <a href="mailto:tola.rom16@gmail.com"><i class='bx bx-envelope' class="contact__icon"></i>tola.rom16@gmail.com</a>
+                    <a href="https://maps.app.goo.gl/oQRMNTtmxzaz23jWA" target="_blank"><i class='bx  bx-map' class="contact__icon"></i>279C, St 590, Sangkat Toul Songkae, Khan Russey Keo, Phnom Penh</a>
+                    
                 </div>
             </section>
         </main>

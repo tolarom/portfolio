@@ -48,6 +48,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+  background-color: rgba(235, 237, 221, 0.581);
 }
 
 h1, h2, h3, p {
@@ -251,6 +252,25 @@ img {
   border-radius: 0.5rem;
 }
 
+/* ===== EDUCATION =====*/
+.education__container{
+  row-gap: 2rem;
+  text-align: center;
+}
+.education__subtitle {
+  margin-bottom: var(--mb-2);
+}
+.education__text {
+  margin-bottom: var(--mb-4);
+}
+.education__img{
+  justify-self: center;
+}
+.education__img img {
+  width: 300px;
+  border-radius: 0.5rem;
+}
+
 /* ===== SKILLS =====*/
 .skills__container {
   row-gap: 2rem;
@@ -325,37 +345,65 @@ img {
 /* ===== PROJECT =====*/
 .project__container {
   row-gap: 2rem;
+  text-align: center;
+}
+
+.project__subtitle {
+  margin-bottom: var(--mb-2);
+}
+.project__text {
+  margin-bottom: var(--mb-4);
+}
+.project__img__container {
+  width: 700px;
+  margin: 60px auto;
+  position: relative;
+  text-align: center;
 }
 .project__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-  border-radius: 0.5rem;
-  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: block;
 }
-.project__img img {
-  transition: 1s;
+.project__img__controls {
+  position: absolute;
+  left: 0;
+  bottom: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
 }
-.project__img img:hover {
-  transform: scale(1.1);
+.project__btn {
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+  cursor: pointer;
+  transition: background 0.2s;
+  pointer-events: auto;
+}
+.project__btn:active {
+  background: rgba(220,220,220,0.95);
+}
+.project__btn svg {
+  width: 22px;
+  height: 22px;
+  fill: #333;
 }
 
 /* ===== CONTACT =====*/
-.contact__input {
-  width: 100%;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: 1.5px solid var(--second-color);
-  outline: none;
-  margin-bottom: var(--mb-4);
-}
-.contact__button {
-  display: block;
-  border: none;
-  outline: none;
-  font-size: var(--normal-font-size);
-  cursor: pointer;
-  margin-left: auto;
+.footer__icon {
+  font-size: 3rem;
+  margin: 0 var(--mb-2);
 }
 
 /* ===== FOOTER =====*/
@@ -366,10 +414,6 @@ img {
   font-weight: var(--font-semi);
   padding: 3rem 0;
 }
-.footer__title {
-  font-size: 2rem;
-  margin-bottom: var(--mb-4);
-}
 .footer__social {
   margin-bottom: var(--mb-4);
 }
@@ -377,9 +421,6 @@ img {
   font-size: 1.5rem;
   color: #fff;
   margin: 0 var(--mb-2);
-}
-.footer__copy {
-  font-size: var(--smaller-font-size);
 }
 
 /* ===== MEDIA QUERIES=====*/
@@ -414,15 +455,25 @@ img {
     align-items: center;
     text-align: initial;
   }
+  .education__container {
+    grid-template-columns: 0.7fr;
+    justify-content: center;
+    column-gap: 1rem;
+  }
   .skills__container {
     grid-template-columns: 0.7fr;
     justify-content: center;
     column-gap: 1rem;
   }
   .project__container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 0.7fr;
     column-gap: 2rem;
     padding-top: 2rem;
+    justify-content: center;
+  }
+  .project__img__container {
+    width: 100%;
+    height: auto;
   }
   .contact__form {
     width: 360px;
@@ -477,6 +528,12 @@ img {
   .about__img img {
     width: 300px;
   }
+  .education__container{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    align-items: center;
+    text-align: initial;
+  }
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
@@ -487,9 +544,15 @@ img {
     grid-column: 1/3;
   }
   .project__container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
+    align-items: center;
+    text-align: initial;
   }
+  .project__description__3{
+  grid-column: 1/3;
+}
+  
 }
 @media screen and (min-width: 992px) {
   .bd-grid {
