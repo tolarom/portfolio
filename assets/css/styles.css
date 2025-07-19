@@ -401,7 +401,7 @@ img {
 }
 
 /* ===== CONTACT =====*/
-.footer__icon {
+.contact__icon {
   font-size: 3rem;
   margin: 0 var(--mb-2);
 }
