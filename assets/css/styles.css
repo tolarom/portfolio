@@ -468,6 +468,9 @@ img {
     text-align: initial;
     column-gap: 1rem;
   }
+  .skills__description{
+    grid-column: 1/2;
+  }
   .project__container {
     grid-template-columns: 0.7fr;
     column-gap: 2rem;
@@ -478,6 +481,9 @@ img {
   .project__img__container {
     width: 400px;
     height: auto;
+  }
+  .project__description__3{
+    grid-column: auto;
   }
   .contact__container {
     justify-items: center;
