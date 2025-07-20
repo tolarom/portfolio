@@ -476,7 +476,7 @@ img {
     text-align: initial;
   }
   .project__img__container {
-    width: 100%;
+    width: 400px;
     height: auto;
   }
   .contact__container {
