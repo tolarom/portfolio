@@ -26,6 +26,10 @@ export const skills = {
         icons: icons.vue,
         level: "70"
     },
-
+    mysql: {
+        name: "MySQL ",
+        icons: icons.mysql,
+        level: "70"
+    }
 
 }

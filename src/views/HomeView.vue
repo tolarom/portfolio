@@ -1,18 +1,22 @@
 <script setup>
-import skillCard from '../components/skill-card.vue'
+import SkillCard from '../components/skill-card.vue'
 import { skills } from '../constants/skill'
+import MessageBox from '../components/message-box.vue'
 </script>
 
 <template>
 <div class="container">
     <section class="skill">
-        <skillCard 
+        <skill-card 
         v-for="skill in skills"
         :key="skill.name"
         :skill_name= skill.name
         :skill_image= skill.icons
         :percentage= skill.level
         />
+    </section>
+    <section class="message-box">
+        <message-box />
     </section>
 </div>
 </template>
